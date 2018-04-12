@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minhas_anotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="Ifx-5W-VgF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HV9-yl-voS">
+                                <rect key="frame" x="24" y="28" width="327" height="434"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1zU-tx-C03">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="67"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zkc-1L-tb6">
+                                        <rect key="frame" x="0.0" y="67" width="327" height="293"/>
+                                        <color key="backgroundColor" red="0.91566663980484009" green="0.90109831094741821" blue="0.70102441310882568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIk-vu-brd">
+                                        <rect key="frame" x="0.0" y="360" width="327" height="74"/>
+                                        <state key="normal" backgroundImage="botao_salvar"/>
+                                        <connections>
+                                            <action selector="salvarAnotacao:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hp3-7t-FYi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HV9-yl-voS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="G1P-ED-xuP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ifx-5W-VgF" secondAttribute="bottom" id="KQp-6c-vIy"/>
+                            <constraint firstItem="Ifx-5W-VgF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ka5-A6-wB1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HV9-yl-voS" secondAttribute="trailing" constant="8" id="Mna-wI-PaW"/>
+                            <constraint firstItem="Ifx-5W-VgF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YaB-yt-5Y1"/>
+                            <constraint firstAttribute="trailing" secondItem="Ifx-5W-VgF" secondAttribute="trailing" id="mU4-Du-Zma"/>
+                            <constraint firstItem="HV9-yl-voS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sa4-2F-nLH"/>
+                            <constraint firstItem="HV9-yl-voS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="uK0-SV-FHt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HV9-yl-voS" secondAttribute="bottom" constant="205" id="vgx-dz-5hJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textoTextView" destination="Zkc-1L-tb6" id="BtU-Pt-iTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_salvar" width="321" height="38"/>
+        <image name="fundo" width="768" height="462"/>
+        <image name="logo" width="321" height="67"/>
+    </resources>
+</document>
